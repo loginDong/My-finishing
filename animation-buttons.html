@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @charset"utf-8";
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{padding:0;margin:0}
+        ol,ul,dl{list-style:none}body{font:12px/2"Lucida Grande",Helvetica,Arial,Verdana,"Microsoft YaHei",sans-serif;color:#555;background:#fff;overflow-x:hidden;overflow-y:auto}
+        img{border:none}
+        table{border-collapse:collapse;border-spacing:0}
+        input,textarea,select{font:12px"Microsoft YaHei",simsun,tahoma;outline:none}
+        a,button{cursor:pointer;outline:0;text-decoration:none;color:#128ec2}a:hover{text-decoration:underline}
+        h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}.clearfix:after{visibility:hidden;display:block;content:"";clear:both;font-size:0;height:0}
+        .clearfix{zoom:1}.clear{clear:both}.hidden{line-height:99999px;overflow:hidden}
+        .relative{position:relative}.fl{float:left}.fr{float:right}.g-hd{height:64px;line-height:64px;background:url(../images/hd.jpg)repeat-x}
+        .g-hd h1{text-align:center;color:#fff;font-size:30px;text-shadow:0 5px 5px rgba(0,0,0,0.5)}.tool-box{background:#23262E;height:59px;border-bottom:1px solid#404553}
+        .tool-main{position:relative;width:auto;margin:0 15px}.logo{position:absolute;left:0;top:16px}.logo img{width:162px;height:30px}.nav{float:right;font-size:14px}
+        .nav-item{position:relative;display:inline-block;vertical-align:middle;line-height:54px;margin:0 5px}.nav-item a{display:block;padding:0 20px;color:#c2c2c2;border-bottom:5px solid transparent;transition:all.3s;text-decoration:none}
+        .nav-item a:hover,.nav-this a{color:#fff;border-bottom:5px solid#5FB878}.g-nav{background:url(../images/nav.png)repeat-x;height:45px;box-shadow:0 2px 0 0 rgba(0,0,0,0.02);min-width:1002px}
+        .m-nav{height:37px;padding:8px 0 0;line-height:35px;text-align:center;text-shadow:1px 1px#fff}.m-nav,.m-nav li{font-size:0;letter-spacing:-0.307em;*letter-spacing:normal;*word-spacing:-1px}
+        .m-nav li,.m-nav li a{display:inline-block;*display:inline;*zoom:1;height:35px}.m-nav li{position:relative;padding-left:2px;background:url(../images/nav.png)-91px-55px no-repeat;font-size:0;letter-spacing:-0.307em}
+        .m-nav li a{padding:0 20px;font-size:14px;letter-spacing:normal;word-spacing:normal;color:#556165}.m-nav li a:hover{color:#488c9d;text-decoration:none}
+        .m-nav li i{display:none;position:absolute;left:50%;top:35px;width:14px;height:8px;margin-left:-6px;overflow:hidden;background:url(../images/nav.png)0-66px no-repeat}
+        .m-nav li:first-of-type{background:none}.m-nav li.crt i{display:block}
+        .g-wrapper{width:1002px;margin:0 auto}
+        .back-top{background:url(../images/back-top.gif)no-repeat;width:35px;height:45px;position:fixed;right:10px;bottom:10px}
+        .g-ft{padding:30px 0 10px;border-top:1px solid#dbdbdb;background:-webkit-linear-gradient(#f9f9f9,#fff 30px);background:-moz-linear-gradient(#f9f9f9,#fff 30px);background:-ms-linear-gradient(#f9f9f9,#fff 30px);background:linear-gradient(#f9f9f9,#fff 30px)}
+        .g-ft.g-wrapper{text-align:center}.g-main{padding:50px 0 40px}.g-main.g-wrapper{min-height:550px}.m-intro{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid#eeeeef}.m-intro h2{font-size:48px;margin:0 0 15px}.m-intro p{font-size:14px}
+        .m-enter li{display:inline;float:left;margin:65px 0 0 65px}.m-enter li a{display:block;width:200px;height:136px;padding:15px 19px 0 21px;background:url(../images/icn1.png)no-repeat 0-260px}
+        .m-enter li a:hover{background-position:0-420px;text-decoration:none}
+        .m-enter h3{height:31px;line-height:31px;font-size:22px}.m-enter p{margin:25px 0 0;line-height:18px;color:#666}.bug-list{padding-top:10px}.bug-list li{background:url(../images/icn-q.png)no-repeat 30px 7px;padding:5px 60px;margin-bottom:16px;font-size:14px;border-bottom:1px solid#eeeeef;box-shadow:0-30px 30px rgba(238,238,239,0.5)inset;border-radius:8px}
+        .q{padding-bottom:5px}.red{color:#F00}#view{position:absolute;left:0;top:130px;right:0;bottom:0;overflow:hidden}#iframe{border:0;width:100%;height:60%}#viewCode{width:100%;height:40%;padding-top:3px;box-sizing:border-box}#viewCode:before{content:"";display:block;height:1px;overflow:hidden;border-top:1px solid#b5b5b5;border-bottom:1px solid#c2c2c2;background:#bcbcbc}
+        #viewCode textarea{float:left;width:50%;height:100%;border:0;background:none;box-sizing:border-box;padding:10px;overflow-y:auto}#viewCode textarea:first-of-type{border-right:2px solid#ccc}
+        .grid-list li{float:left;margin:8px 30px}
+        .grid-list li a{display:block;width:188px;color:#333}.grid-list li img,.grid-list li p{display:block;border:1px solid#e7e7e7;padding:1px;width:184px;height:138px}
+        .grid-list li p{background:#b1d6dd;color:#fff;display:table-cell;vertical-align:middle;text-align:center;font-size:25px;word-break:break-all;word-wrap:break-word;line-height:1.2}
+        .grid-list li h4{height:26px;line-height:26px;border:1px solid#e7e7e7;border-width:0 1px 3px 1px;padding:0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .grid-list li a:hover{color:#128ec2;text-decoration:none}
+        .grid-list li a:hover h4{border-bottom-color:#b1d6dd}#effects{font-size:14px}
+        #effects h2{font-weight:bold;font-size:18px}[class^="hvr-"]{margin:.8em.4em;padding:1em;cursor:pointer;background:#e1e1e1;text-decoration:none;color:#666;display:inline-block}[class^="hvr-"]:hover{text-decoration:none}.ani-txt-list li{background-image:none}
+        .ani-txt-list li a{position:relative;display:inline-block;margin:15px 25px;outline:none;text-decoration:none;text-transform:uppercase;letter-spacing:1px;font-weight:400;text-shadow:0 0 1px rgba(255,255,255,0.3);font-size:1.35em}
+        .ani-txt-list li a:hover,.ani-txt-list li:focus{outline:none}.demo{display:inline-block;width:30%;padding:10px;-webkit-box-sizing:padding-box;box-sizing:padding-box}
+        .demo textarea{-webkit-box-sizing:padding-box;box-sizing:padding-box;font-family:"Roboto";font-size:0.9em;height:22px;line-height:22px;padding:6px 0px;resize:none;text-align:center;width:100%;border:1px solid rgba(0,0,0,0.2)}
+        .cms-list p,.cut-list p{padding:5px 0}.cms-list img,.cut-list img{max-width:95%}.cms-list table{width:100%;text-align:center}
+        .cms-list table th,.cms-list table td{border:1px solid#dddddd}
+        .cms-list table tr:nth-of-type(even){background:#f8f8f8}pre{word-break:break-all;word-wrap:break-word}
+        .g-txt{font-size:14px}.g-txt li{padding-bottom:16px}.g-txt p{margin-bottom:5px;text-indent:2em}.g-txt p img{margin-left:-2em}
+        .g-txt li p:before,.p-item:before{content:"●";padding-right:5px}.m-article{font-size:14px}.m-article p{text-indent:2em}.u-ttb3{font-size:24px;margin:10px 0;font-weight:bold}
+        .u-ttb4{font-size:18px;margin-bottom:10px;font-weight:bold}
+        .t-c{text-align:center;text-indent:0!important}.m-article pre{margin:1em 0}
+        h2{text-align: left;padding-left: 30px;}
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="http://zydown.99.com/gw/repository/css/hover-btn.css">
+    <div id="effects" class="effects">
+        <h2>Transform属性变换效果</h2>
+
+		<a href="#" class="hvr-grow">Grow</a>
+		<a href="#" class="hvr-shrink">Shrink</a>
+		<a href="#" class="hvr-pulse">Pulse</a>
+		<a href="#" class="hvr-pulse-grow">Pulse Grow</a>
+		<a href="#" class="hvr-pulse-shrink">Pulse Shrink</a>
+		<a href="#" class="hvr-push">Push</a>
+		<a href="#" class="hvr-pop">Pop</a>
+		<a href="#" class="hvr-bounce-in">Bounce In</a>
+		<a href="#" class="hvr-bounce-out">Bounce Out</a>
+		<a href="#" class="hvr-rotate">Rotate</a>
+		<a href="#" class="hvr-grow-rotate">Grow Rotate</a>
+		<a href="#" class="hvr-float">Float</a>
+		<a href="#" class="hvr-sink">Sink</a>
+		<a href="#" class="hvr-bob">Bob</a>
+		<a href="#" class="hvr-hang">Hang</a>
+		<a href="#" class="hvr-skew">Skew</a>
+		<a href="#" class="hvr-skew-forward">Skew Forward</a>
+		<a href="#" class="hvr-skew-backward">Skew Backward</a>
+		<a href="#" class="hvr-wobble-horizontal">Wobble Horizontal</a>
+		<a href="#" class="hvr-wobble-vertical">Wobble Vertical</a>
+		<a href="#" class="hvr-wobble-to-bottom-right">Wobble To Bottom Right</a>
+		<a href="#" class="hvr-wobble-to-top-right">Wobble To Top Right</a>
+		<a href="#" class="hvr-wobble-top">Wobble Top</a>
+		<a href="#" class="hvr-wobble-bottom">Wobble Bottom</a>
+		<a href="#" class="hvr-wobble-skew">Wobble Skew</a>
+		<a href="#" class="hvr-buzz">Buzz</a>
+		<a href="#" class="hvr-buzz-out">Buzz Out</a>
+		<a href="#" class="hvr-forward">Forward</a>
+		<a href="#" class="hvr-backward">Backward</a>
+
+
+		<h2>背景变换效果</h2>
+
+		<a href="#" class="hvr-fade">Fade</a>
+		<a href="#" class="hvr-back-pulse">Back Pulse</a>
+		<a href="#" class="hvr-sweep-to-right">Sweep To Right</a>
+		<a href="#" class="hvr-sweep-to-left">Sweep To Left</a>
+		<a href="#" class="hvr-sweep-to-bottom">Sweep To Bottom</a>
+		<a href="#" class="hvr-sweep-to-top">Sweep To Top</a>
+		<a href="#" class="hvr-bounce-to-right">Bounce To Right</a>
+		<a href="#" class="hvr-bounce-to-left">Bounce To Left</a>
+		<a href="#" class="hvr-bounce-to-bottom">Bounce To Bottom</a>
+		<a href="#" class="hvr-bounce-to-top">Bounce To Top</a>
+		<a href="#" class="hvr-radial-out">Radial Out</a>
+		<a href="#" class="hvr-radial-in">Radial In</a>
+		<a href="#" class="hvr-rectangle-in">Rectangle In</a>
+		<a href="#" class="hvr-rectangle-out">Rectangle Out</a>
+		<a href="#" class="hvr-shutter-in-horizontal">Shutter In Horizontal</a>
+		<a href="#" class="hvr-shutter-out-horizontal">Shutter Out Horizontal</a>
+		<a href="#" class="hvr-shutter-in-vertical">Shutter In Vertical</a>
+		<a href="#" class="hvr-shutter-out-vertical">Shutter Out Vertical</a>
+        <button class="button button--aylen">Aylen</button>
+
+		<h2>边框变换效果</h2>
+
+		<a href="#" class="hvr-border-fade">Border Fade</a>
+		<a href="#" class="hvr-hollow">Hollow</a>
+		<a href="#" class="hvr-trim">Trim</a>
+		<a href="#" class="hvr-ripple-out">Ripple Out</a>
+		<a href="#" class="hvr-ripple-in">Ripple In</a>
+		<a href="#" class="hvr-outline-out">Outline Out</a>
+		<a href="#" class="hvr-outline-in">Outline In</a>
+		<a href="#" class="hvr-round-corners">Round Corners</a>
+		<a href="#" class="hvr-underline-from-left">Underline From Left</a>
+		<a href="#" class="hvr-underline-from-center">Underline From Center</a>
+		<a href="#" class="hvr-underline-from-right">Underline From Right</a>
+		<a href="#" class="hvr-reveal">Reveal</a>
+		<a href="#" class="hvr-underline-reveal">Underline Reveal</a>
+		<a href="#" class="hvr-overline-reveal">Overline Reveal</a>
+		<a href="#" class="hvr-overline-from-left">Overline From Left</a>
+		<a href="#" class="hvr-overline-from-center">Overline From Center</a>
+		<a href="#" class="hvr-overline-from-right">Overline From Right</a>
+        <button class="button button--quidel"><span>Quidel</span></button>
+
+
+		<h2>阴影变换效果</h2>
+
+		<a href="#" class="hvr-shadow">Shadow</a>
+		<a href="#" class="hvr-grow-shadow">Grow Shadow</a>
+		<a href="#" class="hvr-float-shadow">Float Shadow</a>
+		<a href="#" class="hvr-glow">Glow</a>
+		<a href="#" class="hvr-shadow-radial">Shadow Radial</a>
+		<a href="#" class="hvr-box-shadow-outset">Box Shadow Outset</a>
+		<a href="#" class="hvr-box-shadow-inset">Box Shadow Inset</a>
+        <button class="button button--moema">Moema</button>
+	</div>
+</body>
+</html>
