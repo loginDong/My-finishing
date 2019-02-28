@@ -1,0 +1,220 @@
+print ("Hello,Python")
+# cuonter = 100
+# mile = 0.04
+# name = 'alien'
+# print (cuonter)
+# print (mile)
+# print (name)
+# s = 'abcdef'
+#截取不包含尾下标的字符.  截取可以接收第三个参数，从startIndex到endIndex之间
+# print (s[1:5])
+
+# str = 'Hello World!'
+ 
+# print(str)           # 输出完整字符串
+# print(str[0])        # 输出字符串中的第一个字符
+# print(str[2:5])      # 输出字符串中第三个至第五个之间的字符串
+# print(str[2:])       # 输出从第三个字符开始的字符串
+# print(str * 2)       # 输出字符串两次
+# print(str + "TEST")  # 输出连接的字符串
+
+# 题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
+# 程序分析：可填在百位、十位、个位的数字都是1、2、3、4。组成所有的排列后再去 掉不满足条件的排列
+# for i in range(1,5):
+#  for j in range(1,5):
+#     for k in range(1,5):
+#        if(i != j) and (j != k) and (k != i):
+#           print(i,j,k)
+
+# a = 20
+# b = 20
+# c = 30
+# print(a+b,a-b,b/a,b*c)
+#取整数，返回商的整数部分，向下取整
+# print(9//2)
+# 比较运算符    描述            实例
+# ==       等于 -         比较对象是否相等  (a == b) 返回 False。
+# !=       不等于 -       比较两个对象是否不相等    (a != b) 返回 true.
+# <>       不等于 -       比较两个对象是否不相等    (a <> b) 返回 true。这个运算符类似 != 。
+# >            大于 -         返回x是否大于y  (a > b) 返回 False。
+# <            小于 -         返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。  (a < b) 返回 true。
+# >=       大于等于   -     返回x是否大于等于y。  (a >= b) 返回 False。
+# <=       小于等于 -   返回x是否小于等于y。  (a <= b) 返回 true。
+# 赋值运算符    描述                 实例
+# =            简单的赋值运算符       c = a + b 将 a + b 的运算结果赋值为 c
+# +=       加法赋值运算符        c += a 等效于 c = c + a
+# -=       减法赋值运算符        c -= a 等效于 c = c - a
+# *=       乘法赋值运算符        c *= a 等效于 c = c * a
+# /=       除法赋值运算符        c /= a 等效于 c = c / a
+# %=       取模赋值运算符        c %= a 等效于 c = c % a
+# **=      幂赋值运算符         c **= a 等效于 c = c ** a
+# //=      取整除赋值运算符       c //= a 等效于 c = c // a
+
+# 逻辑运算符    逻辑表达式  描述                                                                     实例
+# and      x and y        布尔"与" - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。        (a and b) 返回 20。
+# or       x or y     布尔"或"  - 如果 x 是非 0，它返回 x 的值，否则它返回 y 的计算值。             (a or b) 返回 10。
+# not      not x      布尔"非" - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。       not(a and b) 返回 False
+#
+
+# 运算符      描述                                                 实例
+# in       如果在指定的序列中找到值返回 True，否则返回 False。        x 在 y 序列中 , 如果 x 在 y 序列中返回 True。
+# not in   如果在指定的序列中没有找到值返回 True，否则返回 False。  x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。
+# eg:       a = 10
+#           b = 20
+#           list = [1, 2, 3, 4, 5 ];
+#         if ( a in list ):
+#            print "1 - 变量 a 在给定的列表中 list 中"
+#         else:
+#            print "1 - 变量 a 不在给定的列表中 list 中"
+#
+#         if ( b not in list ):
+#            print "2 - 变量 b 不在给定的列表中 list 中"
+#         else:
+#            print "2 - 变量 b 在给定的列表中 list 中"
+
+#if语句的判断条件可以用>（大于）、<(小于)、==（等于）、>=（大于等于）、<=（小于等于）来表示其关系
+# if(a == b):
+#     print("a等于b")
+# else:
+#     print("a和b不相等")
+    #判断条件为多个数的时候    python不支持switch语句来判断 都用
+# if 判断条件1:
+#     执行语句1……
+# elif 判断条件2:
+#     执行语句2……
+# elif 判断条件3:
+#     执行语句3……
+# else:
+#     执行语句4……
+
+# BOARD_SIZE = 8
+#
+# def under_attack(col, queens):
+#    left = right = col
+#    for r, c in reversed(queens):
+#  #左右有冲突的位置的列号
+#        left, right = left - 1, right + 1
+#
+#        if c in (left, col, right):
+#            return True
+#    return False
+#
+# def solve(n):
+#    if n == 0:
+#        return [[]]
+#
+#    smaller_solutions = solve(n - 1)
+#
+#    return [solution+[(n,i+1)]
+#        for i in range(BOARD_SIZE)
+#            for solution in smaller_solutions
+#                if not under_attack(i+1, solution)]
+# for answer in solve(BOARD_SIZE):
+#    print(answer)
+
+#把一个数组里面的项按照奇数和偶数分成两个不同的数组
+#注意空格  嵌套执行的程序要在前面加空格/tab（对齐） 才能执行 否则知识单独执行某一程序
+# while 语句时还有另外两个重要的命令 continue，break 来跳过循环，continue 用于跳过该次循环，break 则是用于退出循环
+# 如果条件判断语句永远为 true，循环将会无限的执行下去
+# while … else 在循环条件为 false 时执行 else 语句块
+    # numbers = [6,8,9,7,11,14,23,15,60,77]
+    # even = []
+    # odd = []
+    # while len(numbers) > 0 :
+    #     number = numbers.pop()
+    #     if (number % 2 == 0):
+    #         even.append(number)
+    #     else:
+    #         odd.append(number)
+    #
+    # print(even)
+    # print(odd)
+#break语句
+# var = 10
+# while var > 0:
+#     print('当前变量值 :', var)
+#     var = var - 1
+#     if var == 5:  # 当变量 var 等于 5 时退出循环
+#         break
+#
+# print("Good bye!")
+
+#continue语句
+# var = 10
+# while var > 0:
+#    var = var -1
+#    if var == 5: #当var是5的时候 跳过
+#       continue
+#    print('当前变量值 :', var)
+# print("Good bye!")
+#pass语句
+# pass 不做任何事情，一般用做占位语句
+
+#ptthon的类型转换
+# int(x [,base ])         将x转换为一个整数
+# long(x [,base ])        将x转换为一个长整数
+# float(x )               将x转换到一个浮点数
+# complex(real [,imag ])  创建一个复数
+# str(x )                 将对象 x 转换为字符串
+# repr(x )                将对象 x 转换为表达式字符串
+# eval(str )              用来计算在字符串中的有效Python表达式,并返回一个对象
+# tuple(s )               将序列 s 转换为一个元组
+# list(s )                将序列 s 转换为一个列表
+# chr(x )                 将一个整数转换为一个字符
+# unichr(x )              将一个整数转换为Unicode字符
+# ord(x )                 将一个字符转换为它的整数值
+# hex(x )                 将一个整数转换为一个十六进制字符串
+# oct(x )                 将一个整数转换为一个八进制字符串
+
+# math 模块、cmath 模块
+# Python math 模块提供了许多对浮点数的数学运算函数。
+# Python cmath 模块包含了一些用于复数运算的函数。
+import math
+import cmath
+print(dir(math)) #['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+print(dir(cmath))#['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atanh', 'cos', 'cosh', 'e', 'exp', 'inf', 'infj', 'isclose', 'isfinite', 'isinf', 'isnan', 'log', 'log10', 'nan', 'nanj', 'phase', 'pi', 'polar', 'rect', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau']
+# 函数               返回值 ( 描述 )
+# abs(x)           返回数字的绝对值，如abs(-10) 返回 10
+# ceil(x)          返回数字的上入整数，如math.ceil(4.1) 返回 5
+# cmp(x, y)            如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1
+# exp(x)           返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045
+# fabs(x)          返回数字的绝对值，如math.fabs(-10) 返回10.0
+# floor(x)         返回数字的下舍整数，如math.floor(4.9)返回 4
+# log(x)           如math.log(math.e)返回1.0,math.log(100,10)返回2.0
+# log10(x)         返回以10为基数的x的对数，如math.log10(100)返回 2.0
+# max(x1, x2,...)  返回给定参数的最大值，参数可以为序列。
+# min(x1, x2,...)  返回给定参数的最小值，参数可以为序列。
+# modf(x)          返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。
+# pow(x, y)    x**y    运算后的值。
+# round(x [,n])        返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。
+# sqrt(x)          返回数字x的平方根
+#随机数函数
+# choice(seq)      从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。
+# randrange ([start,] stop [,step])    从指定范围内，按指定基数递增的集合中获取一个随机数，基数缺省值为1
+# random()         随机生成下一个实数，它在[0,1)范围内。
+# seed([x])            改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。
+# shuffle(lst)     将序列的所有元素随机排序
+# uniform(x, y)        随机生成下一个实数，它在[x,y]范围内。
+# 三角函数
+# acos(x)      返回x的反余弦弧度值。
+# asin(x)      返回x的反正弦弧度值。
+# atan(x)      返回x的反正切弧度值。
+# atan2(y, x)  返回给定的 X 及 Y 坐标值的反正切值。
+# cos(x)       返回x的弧度的余弦值。
+# hypot(x, y)  返回欧几里德范数 sqrt(x*x + y*y)。
+# sin(x)       返回的x弧度的正弦值。
+# tan(x)       返回x弧度的正切值。
+# degrees(x)   将弧度转换为角度,如degrees(math.pi/2) ， 返回90.0
+# radians(x)   将角度转换为弧度
+#
+# pi   数学常量 pi（圆周率，一般以π来表示）
+# e        数学常量 e，e即自然常数（自然常数）。
+
+
+
+
+
+
+
+
+
