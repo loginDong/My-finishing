@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .load-box{width:128px;height:128px;position:relative;margin:300px auto;}
+        .loading{position:absolute;background:url(https://i.imgur.com/YbfqQr8.png) 0 0;background-size:128px 128px;width:128px;height:128px;animation:run 4s linear infinite}
+        @keyframes run{from{transform:rotate(0deg)}
+        to{transform:rotate(360deg)}
+        }.progress-box{width:inherit;display:flex;flex-direction:column;align-items:center;height:inherit;justify-content:center}
+        .progress{font-size:14px;position:relative}
+        .play{animation:rot 4s linear infinite}
+        @keyframes rot{from{transform:rotate(0deg)}
+        to{transform:rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+    <div class="load-box">
+        <div class="loading"></div>
+        <div class="progress-box">
+            <div>80%</div>
+            <div class="progress">正在加载...</div>
+        </div>
+    </div>
+</body>
+</html>
