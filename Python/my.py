@@ -444,7 +444,7 @@ import cmath
 # 9	list.sort(cmp=None, key=None, reverse=False)		# 对原列表进行排序
 
 
-# 元组
+print("元组")
 # tup1 = (12, 34.56)
 # tup2 = ('abc', 'xyz')
 # 元组中的元素值是不允许修改的，但我们可以对元组进行连接组合  元素不可以删除 但是可以用del删除整个元组
@@ -457,3 +457,32 @@ import cmath
 # 3			max(tuple)				返回元组中元素最大值。
 # 4			min(tuple)				返回元组中元素最小值。
 # 5			tuple(seq)				将列表转换为元组。
+
+
+
+
+print("Python 字典（Dictionary)")
+#字典是另一种可变容器类型且可以存储任意类型对象
+#字典的格式   d = {key1 : value1, key2 : value2 }
+# 访问字典里的值： dictName['attrName']    修改字典  直接赋值     del dict['Name']删除键是'Name'的条目     dict.clear()清空词典所有条目    del dict删除词典
+#1)  不允许同一个键出现两次。创建时如果同一个键被赋值两次，后一个值会被记住
+#2)  键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行
+
+#字典的内置函数和方法
+#cmp(dict1,dict2) 比较两个字典元素   len(dict)计算字典长度     str(dict) 输出字典可打印的字符串表示
+
+#字典所包含的内置方法
+# 函数	                                描述
+# 1	dict.clear()                        删除字典内所有元素
+# 2	dict.copy()                         返回一个字典的浅复制
+# 3	dict.fromkeys(seq[, val])           创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值   没有seq后面的list 默认值都显示为none  只有一个X的话  所有的seq里面的每个值的默认值都显示为这个X
+# 4	dict.get(key, default=None)         返回指定键的值，如果值不在字典中返回default值
+# 5	dict.has_key(key)                   如果键在字典dict里返回true，否则返回false
+# 6	dict.items()                        以列表返回可遍历的(键, 值) 元组数组
+# 7	dict.keys()                         以列表返回一个字典所有的键
+# 8	dict.setdefault(key, default=None)  和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default
+# 9	dict.update(dict2)                  把字典dict2的键/值对更新到dict里
+#10 dict.values()                       以列表返回字典中的所有值
+#11 pop(key[,default])                  删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
+#12 popitem()                           随机返回并删除字典中的一对键和值。
+
