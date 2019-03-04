@@ -480,9 +480,260 @@ print("Python 字典（Dictionary)")
 # 5	dict.has_key(key)                   如果键在字典dict里返回true，否则返回false
 # 6	dict.items()                        以列表返回可遍历的(键, 值) 元组数组
 # 7	dict.keys()                         以列表返回一个字典所有的键
-# 8	dict.setdefault(key, default=None)  和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default
+# 8	dict.setdefault(key, default=None)  和get()类似, 但如果键不存在于111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111字典中，将会添加键并将值设为default
 # 9	dict.update(dict2)                  把字典dict2的键/值对更新到dict里
 #10 dict.values()                       以列表返回字典中的所有值
 #11 pop(key[,default])                  删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
 #12 popitem()                           随机返回并删除字典中的一对键和值。
+
+
+#首字母大写
+# name = "dong li yang   "
+# print(name.title()) -->"Dong Li Yang"      #upper()全部字母大写   lower()全部字母小写
+# print(name.rstrip())    #删除字符串末尾的空白，只是暂时性的删除 如果需要永久性的删除 吧新的结果存储到原来的变量名中   lstrip() 删除开头的空白
+
+# first_name = "Dong"
+# last_name = "Liyang"
+# full_name = first_name + " " + last_name
+# print(full_name + " said:'good good study,day day up !'")
+
+
+# list中添加元素 append()追加 insert()指定位置插入
+
+print("Python时间和日期")
+
+import time;
+# task = time.time()
+# print("当前时间戳为：",task)
+# python函数用一个元组装起来的九组数字来处理时间
+# 序号	    属性	            值
+# 0	        tm_year	        2008
+# 1	        tm_mon	        1 到 12
+# 2	        tm_mday	        1 到 31
+# 3	        tm_hour	        0 到 23
+# 4	        tm_min	        0 到 59
+# 5	        tm_sec	        0 到 61 (60或61 是闰秒)
+# 6	        tm_wday	        0到6 (0是周一)
+# 7	        tm_yday	        1 到 366(儒略历)
+# 8     	tm_isdst	    -1, 0, 1, -1是决定是否为夏令时的旗帜
+
+# 当前时间
+# localTime = time.localtime(time.time())
+# print("本地时间为：",localTime)   #>>> time.struct_time(tm_year=2019, tm_mon=3, tm_mday=4, tm_hour=16, tm_min=40, tm_sec=28, tm_wday=0, tm_yday=63, tm_isdst=0) <元组>
+
+# 获取格式化时间                           
+# nowTime = time.asctime(time.localtime(time.time()))
+# print("当前时间为：",nowTime)  #  Mon Mar  4 16:43:17 2019
+
+#格式化日期
+# 格式化成2016-03-20 11:45:39形式
+# print(time.strftime("%Y-%m-%d %H:%M:%s",time.localtime()))
+# 格式化成Sat Mar 28 22:24:24 2016形式
+# print("print(time.strftime('%a %d %d %H:%M:%s %Y')) ")
+
+# 将格式字符串转换为时间戳
+# a = "Sat Mar 28 22:24:24 2016"
+# print(time.mktime(time.strptime(a,"%a %b %d %H:%M:%S %Y")))
+
+# 时间日期格式化符号
+# %y    两位数的年份表示（00-99）
+# %Y    四位数的年份表示（000-9999）
+# %m    月份（01-12）
+# %d    月内中的一天（0-31）
+# %H    24小时制小时数（0-23）
+# %I    12小时制小时数（01-12）
+# %M    分钟数（00=59）
+# %S    秒（00-59）
+# %a    本地简化星期名称
+# %A    本地完整星期名称
+# %b    本地简化的月份名称
+# %B    本地完整的月份名称
+# %c    本地相应的日期表示和时间表示
+# %j    年内的一天（001-366）
+# %p    本地A.M.或P.M.的等价符
+# %U    一年中的星期数（00-53）星期天为星期的开始
+# %w    星期（0-6），星期天为星期的开始
+# %W    一年中的星期数（00-53）星期一为星期的开始
+# %x    本地相应的日期表示
+# %X    本地相应的时间表示
+
+# calendar模块
+
+import calendar;
+# cal = calendar.month(2019,3)
+# print("2019-3 日历：")
+# print(cal) --->>>           March 2019
+#                         Mo Tu We Th Fr Sa Su
+#                                      1  2  3
+#                          4  5  6  7  8  9 10
+#                         11 12 13 14 15 16 17
+#                         18 19 20 21 22 23 24
+#                         25 26 27 28 29 30 31
+
+
+# Time模块
+#     time.timezone       属性time.timezone是当地时区（未启动夏令时）距离格林威治的偏移秒数（>0，美洲;<=0大部分欧洲，亚洲，非洲）。
+# 	  time.tzname         属性time.tzname包含一对根据情况的不同而不同的字符串，分别是带夏令时的本地时区名称，和不带的。
+
+# Time模块包含的内置模块  有时间处理的 有转换时间格式的
+# 序号	    函数                         描述
+# 1	    time.altzone                返回格林威治西部的夏令时地区的偏移秒数。如果该地区在格林威治东部会返回负值（如西欧，包括英国）。对夏令时启用地区才能使用。
+# 2	    time.asctime([tupletime])   接受时间元组并返回一个可读的形式为"Tue Dec 11 18:07:14 2008"（2008年12月11日 周二18时07分14秒）的24个字符的字符串。
+# 3	    time.clock( )               用以浮点数计算的秒数返回当前的CPU时间。用来衡量不同程序的耗时，比time.time()更有用。
+# 4	    time.ctime([secs])          作用相当于asctime(localtime(secs))，未给参数相当于asctime()
+# 5	    time.gmtime([secs])         接收时间戳（1970纪元后经过的浮点秒数）并返回格林威治天文时间下的时间元组t。注：t.tm_isdst始终为0
+# 6	    time.localtime([secs])      接收时间戳（1970纪元后经过的浮点秒数）并返回当地时间下的时间元组t（t.tm_isdst可取0或1，取决于当地当时是不是夏令时）。
+# 7	    time.mktime(tupletime)      接受时间元组并返回时间戳（1970纪元后经过的浮点秒数）。
+# 8	    time.sleep(secs)            推迟调用线程的的运行，secs指秒数
+# 9	    time.strftime(fmt[,tupletime])      接收以时间元组，并返回以可读字符串表示的当地时间，格式由fmt决定。
+# 10	time.strptime(str,fmt='%a %b %d %H:%M:%S %Y')   根据fmt的格式把一个时间字符串解析为时间元组。
+# 11	time.time( )                返回当前时间的时间戳（1970纪元后经过的浮点秒数）。
+# 12	time.tzset()                根据环境变量TZ重新初始化时间相关设置。
+
+# calendar模块
+# 内置函数
+# 序号	        函数及描述
+# 1	        calendar.calendar(year,w=2,l=1,c=6)             返回一个多行字符串格式的year年年历，3个月一行，间隔距离为c。 每日宽度间隔为w字符。每行长度为21* W+18+2* C。l是每星期行数。
+# 2	        calendar.firstweekday( )                        返回当前每周起始日期的设置。默认情况下，首次载入caendar模块时返回0，即星期一。
+# 3	        calendar.isleap(year)                           是闰年返回 True，否则为 False。
+    #                                                       eg：  >>> import calendar
+    #                                                             >>> print(calendar.isleap(2000))
+    #                                                             True
+    #                                                             >>> print(calendar.isleap(1900))
+    #                                                             False
+# 4	        calendar.leapdays(y1,y2)                        返回在Y1，Y2两年之间的闰年总数。
+# 5	        calendar.month(year,month,w=2,l=1)              返回一个多行字符串格式的year年month月日历，两行标题，一周一行。每日宽度间隔为w字符。每行的长度为7* w+6。l是每星期的行数。
+# 6	        calendar.monthcalendar(year,month)              返回一个整数的单层嵌套列表。每个子列表装载代表一个星期的整数。Year年month月外的日期都设为0;范围内的日子都由该月第几日表示，从1开始。
+# 7	        calendar.monthrange(year,month)                 返回两个整数。第一个是该月的星期几的日期码，第二个是该月的日期码。日从0（星期一）到6（星期日）;月从1到12。
+# 8	        calendar.prcal(year,w=2,l=1,c=6)                相当于 print calendar.calendar(year,w,l,c).
+# 9	        calendar.prmonth(year,month,w=2,l=1)            相当于 print calendar.calendar（year，w，l，c）。
+# 10	    calendar.setfirstweekday(weekday)               设置每周的起始日期码。0（星期一）到6（星期日）。
+# 11	    calendar.timegm(tupletime)                      和time.gmtime相反：接受一个时间元组形式，返回该时刻的时间戳（1970纪元后经过的浮点秒数）。
+# 12	    calendar.weekday(year,month,day)                返回给定日期的日期码。0（星期一）到6（星期日）。月份为 1（一月） 到 12（12月）。
+
+
+import time;
+import calendar;
+# （1）当前时间戳
+# 1538271871.226226
+time.time()
+
+# （2）时间戳 → 时间元组，默认为当前时间
+# time.struct_time(tm_year=2018, tm_mon=9, tm_mday=3, tm_hour=9, tm_min=4, tm_sec=1, tm_wday=6, tm_yday=246, tm_isdst=0)
+time.localtime()
+time.localtime(1538271871.226226)
+
+# （3）时间戳 → 可视化时间
+# time.ctime(时间戳)，默认为当前时间
+time.ctime(1538271871.226226)
+
+# （4）时间元组 → 时间戳
+# 1538271871
+time.mktime((2018, 9, 30, 9, 44, 31, 6, 273, 0))
+
+# （5）时间元组 → 可视化时间
+# time.asctime(时间元组)，默认为当前时间
+time.asctime()
+time.asctime((2018, 9, 30, 9, 44, 31, 6, 273, 0))
+time.asctime(time.localtime(1538271871.226226))
+
+# （6）时间元组 → 可视化时间（定制）
+# time.strftime(要转换成的格式，时间元组)
+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+
+# （7）可视化时间（定制） → 时间元祖
+# time.strptime(时间字符串，时间格式)
+print(time.strptime('2018-9-30 11:32:23', '%Y-%m-%d %H:%M:%S'))
+
+# （8）浮点数秒数，用于衡量不同程序的耗时，前后两次调用的时间差
+time.clock()
+
+
+#使用datetime来获取当前的时间和日期
+# import datetime
+# i = datetime.datetime.now()
+# print ("当前的日期和时间是 %s" % i)
+# print ("ISO格式的日期和时间是 %s" % i.isoformat() )
+# print ("当前的年份是 %s" %i.year)
+# print ("当前的月份是 %s" %i.month)
+# print ("当前的日期是  %s" %i.day)
+# print ("dd/mm/yyyy 格式是  %s/%s/%s" % (i.day, i.month, i.year) )
+# print ("当前小时是 %s" %i.hour)
+# print ("当前分钟是 %s" %i.minute)
+# print ("当前秒是  %s" %i.second)
+
+
+# Python函数
+print("自定义一个函数 函数代码块以def关机看次开头 后接函数表示符名称和圆括号() , 参数和自变量放在圆括号中间 也可以定义参数")
+print("函数内容以冒号起始，并且缩进      return[表达式]结束函数 选择性的返回一个值给调用房 不带表达式的return相当于返回None")
+# 实例：  def printme( str ):
+#            "打印传入的字符串到标准显示设备上"
+#            print str
+#            return    #将字符串作为传入参数并打印到标准显示设备上
+
+        #printme("调用函数")
+
+#加了*的变量名会存放所有为命名的变量参数 （不定长参数   同argumrnts参数一样）
+# def printinfo(arg1, *vartuple):
+#     "打印任何传入的参数"
+#     print("输出: ")
+#     print(arg1)
+#     for var in vartuple:
+#         print(var)
+#     return;
+
+# 调用printinfo 函数
+# printinfo(10);   ==>>>输出:10
+# printinfo(70, 60, 50);   ==>>>输出:70 60 50
+
+# 匿名函数
+
+# lambda表达式来创建匿名函数
+# sum = lambda arg1, arg2: arg1 + arg2;
+# print "相加后的值为 : ", sum( 10, 20 ) ==>>相加后的值为 :  30
+# print "相加后的值为 : ", sum( 20, 20 ) ==>>相加后的值为 :  40
+
+
+# total = 0;  # 这是一个全局变量
+# def sum(arg1, arg2):
+#     # 返回2个参数的和."
+#     total = arg1 + arg2;  # total在这里是局部变量.
+#     print("函数内是局部变量 : ", total)
+#     return total;
+#
+#
+# # 调用sum函数
+# sum(10, 20);
+# print("函数外是全局变量 : ", total)
+# 函数内是局部变量 :  30
+# 函数外是全局变量 :  0
+
+
+
+
+# Python模块
+# import 模块名
+# 调用引入模块里面的函数
+
+# from...import 模块名
+# 引入...模块里面指定的某一部分
+# from...import *
+# 引入...模块里面所有的内容
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
